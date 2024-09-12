@@ -6,7 +6,7 @@ on:
       IMG_URL:
         description: 'IMG_ URL'
         required: true
-        default: 'https://github.com/UdyneO2/android_device_oppo_f1s/raw/5.1/recovery.img'
+        default: 'https://github.com/UdyneO2/android_device_oppo_f1s/raw/5.1/OPPO_F1s_mt6750_twrp3.0.3-0_recovery.img'
       MANIFEST_URL:
         description: 'MANIFEST_URL (if want to use SSH keys, use git@github.com:XXXXX)'
         required: true
@@ -38,11 +38,7 @@ jobs:
     # You might want to Checkout your repo first, but not mandatory
     - name: Check Out
       uses: actions/checkout@v3
-    # Cleanup The Actions Workspace Using Custom Composite Run Actions
-    - name: Cleanup
-      uses: rokibhasansagar/slimhub_actions@main
-      # That's it! Now use your normal steps
-
+    
     - name: Prepare the environment
       run: |
         sudo apt update
